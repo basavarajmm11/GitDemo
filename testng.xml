@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="3">
+
+<listeners>
+<listener class-name="TestNg_Tutorial.Listeners"/>
+</listeners>
+
+  <test name="PersonalLoan" parallel="classes" thread-count="3">
+  <parameter name="URL" value="www.google.com"/>
+  <parameter name="Apikey" value="www.api.com"/>
+    <classes>
+      <class name="TestNg_Tutorial.Test1"/>
+      <class name="TestNg_Tutorial.Test2"/>
+      <class name="TestNg_Tutorial.Test4">
+      <methods>
+      <include name="mobileLoginHomeLoan"/>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="CarLoan">
+  <parameter name="URL" value="www.googlecar.com"/>
+  <parameter name="Apikey" value="www.apicar.com"/>
+    <classes>
+      <class name="TestNg_Tutorial.Test3">
+      <methods>
+      <exclude name="mobile.*"/>
+      </methods>
+    </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+</suite> <!-- Suite -->

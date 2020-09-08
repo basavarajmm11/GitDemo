@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="TestNg_Tutorial.Listeners"/>
+  </listeners>
+  <test name="PersonalLoan(failed)" parallel="classes">
+    <parameter name="Apikey" value="www.api.com"/>
+    <parameter name="URL" value="www.google.com"/>
+    <classes>
+      <class name="TestNg_Tutorial.Test1">
+        <methods>
+          <include name="beforemthd"/>
+          <include name="aftermthd"/>
+          <include name="secondMethod"/>
+          <include name="afterls"/>
+          <include name="beforecls"/>
+          <include name="demo"/>
+          <include name="Aftertest"/>
+          <include name="Beforetest"/>
+        </methods>
+      </class> <!-- TestNg_Tutorial.Test1 -->
+      <class name="TestNg_Tutorial.Test3">
+        <methods>
+          <include name="aftersuitt"/>
+          <include name="Beforesuitt"/>
+        </methods>
+      </class> <!-- TestNg_Tutorial.Test3 -->
+    </classes>
+  </test> <!-- PersonalLoan(failed) -->
+</suite> <!-- Failed suite [Suite] -->
