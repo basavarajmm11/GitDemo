@@ -14,15 +14,18 @@ public class Test1
 	@BeforeTest
 	public void Beforetest() {
 		System.out.println("first execute test");
+		System.out.println("first Git Demo test");
 	}
 	
 	@AfterTest
 	public void Aftertest() {
 		System.out.println("After execute test");
+		System.out.println("first Git Demo test2");
 	}
 	@BeforeClass
 	public void beforecls() {
 		System.out.println("before execute class");
+		System.out.println("first Git Demo test3");
 	}
 	
 	@AfterClass
